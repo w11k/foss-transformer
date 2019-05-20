@@ -1,0 +1,27 @@
+{
+  "name": "@w11k/foss-transformer",
+  "version": "0.0.1",
+  "author": "Sascha Engmann",
+  "contributors": [
+    "Sascha Engmann"
+  ],
+  "description": "transforms a license checker json into csv",
+  "main": ".dist/index.js",
+  "bin": {
+    "foss-transform": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/license-checker": "^25.0.0",
+    "@types/node": "^12.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "license-checker": "^25.0.1"
+  }
+}
