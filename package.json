@@ -1,18 +1,18 @@
 {
   "name": "@w11k/foss-transformer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Sascha Engmann",
   "contributors": [
     "Sascha Engmann"
   ],
   "description": "transforms a license checker json into csv",
-  "main": ".dist/index.js",
+  "main": "./dist/index.js",
   "bin": {
     "foss-transform": "./dist/index.js"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/w11k/foss-transformer"
+    "type": "git",
+    "url": "https://github.com/w11k/foss-transformer"
   },
   "scripts": {
     "build": "tsc",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "commander": "^2.20.0",
-    "license-checker": "^25.0.1"
+    "license-checker": "^25.0.1",
+    "output-file-sync": "^2.0.1"
   }
 }
