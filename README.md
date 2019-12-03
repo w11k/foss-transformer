@@ -13,6 +13,9 @@ For simple foss report use ```foss-transform create```
 
 ## Changelog
 
+### 0.0.4
+* Updated bpm repository release via gitlab
+
 ### 0.0.3
 * Updates Project Setup
 * Adds Version Number of Libs to Output CSV
