@@ -15,7 +15,8 @@ For simple foss report use ```foss-transform create```
 
 ### 0.0.3
 * Updates Project Setup
-* Adds Version Number of Libs to Output CSV 
+* Adds Version Number of Libs to Output CSV
+* Adds automatic npm publish per gitlab-ci for each release tag
 
 ### 0.0.2 
 Fix error when output dir or file does not exist
