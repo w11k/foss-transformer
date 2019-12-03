@@ -1,9 +1,10 @@
+image: node
+
 stages:
   - build
   - deploy
 
 build-lib:
-  image: node
   stage: build
   script:
     - npm ci
