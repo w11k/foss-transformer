@@ -14,6 +14,7 @@ build-lib:
       - dist/
       - README.md
       - LICENSE
+      - package.json
 
 publish:
   image: node:alpine
@@ -23,8 +24,5 @@ publish:
   only:
     - tags
   script:
-    - cd dist/
-    - cp ../README.md .
-    - cp ../LICENSE .
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
     - npm publish --access=public
