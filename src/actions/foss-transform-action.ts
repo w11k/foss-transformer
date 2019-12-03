@@ -22,16 +22,14 @@ export async function processTransform(input: ModuleInfos, output: string) {
   ];
   const props = ["licenses", "publisher", "repository"];
 
-  const r = /@[0-9]+.[0-9]+.[0-9]+$/;
-
-  const foo = [
+  const csvEntryPerPackage = [
     header.join(","),
     ...Object.entries(input).map(
-      ([k, v]) =>
-        `"${k.replace(r, "")}",${props
-          .map(p => `"${(v as any)[p]}"`)
-          .join(",")}`
+      ([packageNameWithVersion, moduleInfo]) =>
+        `"${packageNameWithVersion},${props
+          .map(p => `"${(moduleInfo as any)[p]}"`)
+          .join(',')}`,
     )
   ];
-  outputFileSync(outputPath, foo.join("\n"), 'utf-8');
+  outputFileSync(outputPath, csvEntryPerPackage.join("\n"), 'utf-8');
 }
