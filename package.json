@@ -1,9 +1,10 @@
 {
   "name": "@w11k/foss-transformer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Sascha Engmann",
   "contributors": [
-    "Sascha Engmann"
+    "Sascha Engmann",
+    "Frederik von Berg"
   ],
   "description": "transforms a license checker json into csv",
   "main": "./dist/index.js",
@@ -16,6 +17,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "start": "npm run build && npm link && foss-transform create --output build/reports/foss.csv",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "Apache 2.0",

@@ -8,9 +8,13 @@ Run ```foss-transform --help``` to see available commands and options.
 For simple foss report use ```foss-transform create```
 
 ## Development
-Run ```npm link``` in your clone of this repo. Do not install or remove installation in project.
+* Run ``npm install``
+* Run ``npm start`` -> will create a output file in ``build/reports/foss.csv``
 
 ## Changelog
+
+### 0.0.3
+* Updates Project Setup
 
 ### 0.0.2 
 Fix error when output dir or file does not exist
