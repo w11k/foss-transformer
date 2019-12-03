@@ -1,5 +1,4 @@
 import * as checker from "license-checker";
-import * as path from "path";
 import { processTransform } from "./foss-transform-action";
 
 export async function createFossInfo(output: string) {

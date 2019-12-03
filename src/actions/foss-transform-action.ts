@@ -1,11 +1,9 @@
-import * as fs from "fs";
 import * as path from "path";
 import { ModuleInfos } from "license-checker";
 
 const outputFileSync  = require("output-file-sync");
 
 export async function processTransformFromInputFile(inputPath: string, output: string) {
-  const inputAbsolutePath = path.join(process.cwd(), inputPath);
   const a: ModuleInfos = require(inputPath);
 
   await processTransform(a, output);
