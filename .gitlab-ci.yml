@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+build-lib:
+  image: node
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/
+      - README.md
+      - LICENSE
+
+publish:
+  image: node:alpine
+  stage: deploy
+  dependencies:
+    - build-lib
+  only:
+    - tags
+  script:
+    - cd dist/
+    - cp ../README.md .
+    - cp ../LICENSE .
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - npm publish --access=public
