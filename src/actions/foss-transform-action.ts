@@ -24,7 +24,7 @@ export async function processTransform(input: ModuleInfos, output: string) {
     header.join(","),
     ...Object.entries(input).map(
       ([packageNameWithVersion, moduleInfo]) =>
-        `"${packageNameWithVersion},${props
+        `"${packageNameWithVersion}",${props
           .map(p => `"${(moduleInfo as any)[p]}"`)
           .join(',')}`,
     )

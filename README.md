@@ -13,6 +13,9 @@ For simple foss report use ```foss-transform create```
 
 ## Changelog
 
+### 0.0.5
+* Adds missing " in exported csv file after package version number
+
 ### 0.0.4
 * Updated bpm repository release via gitlab
 
